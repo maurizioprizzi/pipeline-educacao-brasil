@@ -1,0 +1,40 @@
+# Ambiente virtual Python
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Dados brutos (grandes demais para Git — reproduzíveis via pipeline)
+data/raw/*
+!data/raw/.gitkeep
+
+# Dados processados (reproduzíveis via pipeline)
+data/processed/*
+!data/processed/.gitkeep
+
+# Dados analíticos (reproduzíveis via pipeline)
+data/analytics/*
+!data/analytics/.gitkeep
+
+# Banco DuckDB (reproduzível)
+*.duckdb
+*.duckdb.wal
+
+# Outputs gerados (reproduzíveis via pipeline)
+outputs/*
+!outputs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+
+# Logs
+*.log

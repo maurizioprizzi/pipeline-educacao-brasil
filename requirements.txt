@@ -1,0 +1,19 @@
+# Ingestão
+requests>=2.31,<3
+
+# Armazenamento
+duckdb>=1.0,<2
+
+# Transformação e análise
+pandas>=2.2,<3
+numpy>=1.26,<2
+
+# Visualização
+matplotlib>=3.9,<4
+plotly>=5.22,<6
+
+# Testes
+pytest>=8.2,<9
+
+# Qualidade de código
+flake8>=7.0,<8
