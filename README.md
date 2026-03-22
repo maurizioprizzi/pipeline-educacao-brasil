@@ -63,7 +63,7 @@ make help
 | Dia | Etapa                    | Status |
 |-----|--------------------------|--------|
 | 1   | Setup e estrutura        | ✅      |
-| 2   | Ingestão de dados        | 🔲      |
+| 2   | Ingestão de dados        | ✅      |
 | 3   | Armazenamento (DuckDB)   | 🔲      |
 | 4   | Limpeza e transformação  | 🔲      |
 | 5   | Análise exploratória     | 🔲      |
