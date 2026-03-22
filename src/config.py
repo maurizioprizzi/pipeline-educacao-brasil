@@ -23,14 +23,19 @@ OUTPUTS_DIR = ROOT_DIR / "outputs"
 # ============================================================================
 
 SOURCES = {
-    "ibge_alfabetizacao": {
-        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/7128/periodos/-6/variaveis/10225?localidades=N3[all]",
-        "description": "Taxa de alfabetização por UF — IBGE/PNAD",
+    "ibge_estados": {
+        "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
+        "description": "Lista de estados brasileiros com região — IBGE",
         "format": "json",
     },
     "ibge_populacao": {
-        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/-6/variaveis/9324?localidades=N3[all]",
-        "description": "População estimada por UF — IBGE",
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2021/variaveis/9324?localidades=N3[all]",
+        "description": "População estimada por UF 2021 — IBGE",
+        "format": "json",
+    },
+    "ibge_pib": {
+        "url": "https://servicodados.ibge.gov.br/api/v3/agregados/5938/periodos/2021/variaveis/37?localidades=N3[all]",
+        "description": "PIB a preços correntes por UF 2021 — IBGE",
         "format": "json",
     },
 }
