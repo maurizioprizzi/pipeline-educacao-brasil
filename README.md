@@ -65,7 +65,7 @@ make help
 | 1   | Setup e estrutura        | ✅      |
 | 2   | Ingestão de dados        | ✅      |
 | 3   | Armazenamento (DuckDB)   | ✅      |
-| 4   | Limpeza e transformação  | 🔲      |
+| 4   | Limpeza e transformação  | ✅      |
 | 5   | Análise exploratória     | 🔲      |
 | 6   | Visualização             | 🔲      |
 | 7   | Orquestração             | 🔲      |
