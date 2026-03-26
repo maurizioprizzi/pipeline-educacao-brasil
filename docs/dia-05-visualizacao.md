@@ -37,4 +37,4 @@ da saída da etapa anterior — nunca pula camadas.
 
 ## Próximo passo
 
-Dia 6: Orquestração e automação da pipeline.
+Dia 7: Orquestração e automação da pipeline.

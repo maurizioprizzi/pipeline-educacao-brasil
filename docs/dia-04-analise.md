@@ -44,4 +44,4 @@ saída — cada etapa da pipeline faz uma coisa só.
 
 ## Próximo passo
 
-Dia 5: Análise exploratória mais profunda com queries SQL.
+Dia 5: Visualizações com matplotlib e plotly.
