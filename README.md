@@ -66,8 +66,8 @@ make help
 | 2   | Ingestão de dados        | ✅      |
 | 3   | Armazenamento (DuckDB)   | ✅      |
 | 4   | Limpeza e transformação  | ✅      |
-| 5   | Análise exploratória     | 🔲      |
-| 6   | Visualização             | 🔲      |
+| 5   | Análise exploratória     | ✅      |
+| 6   | Visualização             | ✅      |
 | 7   | Orquestração             | 🔲      |
 | 8   | Testes e CI              | 🔲      |
 | 9   | Documentação final       | 🔲      |
