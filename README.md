@@ -7,13 +7,13 @@ pública brasileira, construída com ferramentas open source no Linux.
 
 Este projeto constrói uma pipeline end-to-end que coleta, armazena,
 transforma, analisa e visualiza indicadores de educação pública no
-Brasil — cruzando dados do IBGE, INEP e dados.gov.br.
+Brasil — cruzando dados do IBGE e INEP com informações socioeconômicas.
 
 Perguntas que o projeto responde:
 
-- Como a taxa de alfabetização evoluiu por região?
-- Existe correlação entre IDH municipal e desempenho no IDEB?
-- Quais estados investem mais por aluno e qual o retorno?
+- Como o PIB per capita se distribui entre estados e regiões?
+- Qual a relação entre riqueza econômica e infraestrutura educacional?
+- Quais regiões concentram mais matrículas, escolas e docentes por habitante?
 
 ## Stack Técnico
 
@@ -26,6 +26,7 @@ Perguntas que o projeto responde:
 - **GitHub Actions** — CI/CD
 
 ## Estrutura do Projeto
+
 ```
 pipeline-educacao-brasil/
 ├── data/
@@ -44,6 +45,7 @@ pipeline-educacao-brasil/
 ```
 
 ## Como Executar
+
 ```bash
 git clone https://github.com/maurizioprizzi/pipeline-educacao-brasil.git
 cd pipeline-educacao-brasil
@@ -60,23 +62,25 @@ make help
 
 ## Evolução do Projeto
 
-| Dia | Etapa                    | Status |
-|-----|--------------------------|--------|
-| 1   | Setup e estrutura        | ✅      |
-| 2   | Ingestão de dados        | ✅      |
-| 3   | Armazenamento (DuckDB)   | ✅      |
-| 4   | Limpeza e transformação  | ✅      |
-| 5   | Análise exploratória     | ✅      |
-| 6   | Visualização             | ✅      |
-| 7   | Orquestração             | 🔲      |
-| 8   | Testes e CI              | 🔲      |
-| 9   | Documentação final       | 🔲      |
+| Dia | Etapa                                    | Status |
+|-----|------------------------------------------|--------|
+| 1   | Setup e estrutura                        | ✅      |
+| 2   | Ingestão de dados (IBGE)                 | ✅      |
+| 3   | Armazenamento (DuckDB)                   | ✅      |
+| 4   | Tabelas analíticas e métricas derivadas  | ✅      |
+| 5   | Visualizações (matplotlib + plotly)      | ✅      |
+| 6   | Novas fontes de dados (INEP)             | 🔲      |
+| 7   | Limpeza de dados sujos e transformação   | 🔲      |
+| 8   | Cruzamentos complexos e análise avançada | 🔲      |
+| 9   | Visualizações avançadas                  | 🔲      |
+| 10  | Testes de qualidade de dados + CI        | 🔲      |
+| 11  | Orquestração (cron, idempotência, logs)  | 🔲      |
+| 12  | Documentação final e README vitrine      | 🔲      |
 
 ## Fontes de Dados
 
-- **IBGE** — Censo, PNAD, indicadores socioeconômicos
-- **INEP** — IDEB, Censo Escolar, matrículas
-- **dados.gov.br** — Portal de dados abertos do governo federal
+- **IBGE** — População, PIB, indicadores socioeconômicos por UF
+- **INEP** — Censo Escolar, matrículas, escolas, docentes
 
 ## Licença
 
