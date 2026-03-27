@@ -69,7 +69,7 @@ make help
 | 3   | Armazenamento (DuckDB)                   | ✅      |
 | 4   | Tabelas analíticas e métricas derivadas  | ✅      |
 | 5   | Visualizações (matplotlib + plotly)      | ✅      |
-| 6   | Novas fontes de dados (INEP)             | 🔲      |
+| 6   | Novas fontes de dados (INEP)             | ✅      |
 | 7   | Limpeza de dados sujos e transformação   | 🔲      |
 | 8   | Cruzamentos complexos e análise avançada | 🔲      |
 | 9   | Visualizações avançadas                  | 🔲      |
