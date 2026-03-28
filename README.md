@@ -56,7 +56,16 @@ make setup
 # Pipeline completa
 make run
 
-# Ver comandos disponíveis
+# Executar etapas individuais
+make ingest      # Baixar dados do IBGE
+make transform   # Carregar no DuckDB
+make analyze     # Gerar tabelas analíticas
+make visualize   # Gerar gráficos
+
+# Rodar testes
+make test
+
+# Ver todos os comandos
 make help
 ```
 
