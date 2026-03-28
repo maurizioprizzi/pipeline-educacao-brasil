@@ -70,12 +70,11 @@ make help
 | 4   | Tabelas analíticas e métricas derivadas  | ✅      |
 | 5   | Visualizações (matplotlib + plotly)      | ✅      |
 | 6   | Novas fontes de dados (INEP)             | ✅      |
-| 7   | Limpeza de dados sujos e transformação   | 🔲      |
-| 8   | Cruzamentos complexos e análise avançada | 🔲      |
-| 9   | Visualizações avançadas                  | 🔲      |
-| 10  | Testes de qualidade de dados + CI        | 🔲      |
-| 11  | Orquestração (cron, idempotência, logs)  | 🔲      |
-| 12  | Documentação final e README vitrine      | 🔲      |
+| 7   | Cruzamento IBGE + INEP no DuckDB         | ✅      |
+| 8   | Visualizações avançadas                  | 🔲      |
+| 9   | Testes de qualidade de dados + CI        | 🔲      |
+| 10  | Orquestração (cron, idempotência, logs)  | 🔲      |
+| 11  | Documentação final e README vitrine      | 🔲      |
 
 ## Fontes de Dados
 
