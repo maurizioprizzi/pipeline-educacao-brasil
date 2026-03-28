@@ -71,7 +71,7 @@ make help
 | 5   | Visualizações (matplotlib + plotly)      | ✅      |
 | 6   | Novas fontes de dados (INEP)             | ✅      |
 | 7   | Cruzamento IBGE + INEP no DuckDB         | ✅      |
-| 8   | Visualizações avançadas                  | 🔲      |
+| 8   | Visualizações avançadas                  | ✅      |
 | 9   | Testes de qualidade de dados + CI        | 🔲      |
 | 10  | Orquestração (cron, idempotência, logs)  | 🔲      |
 | 11  | Documentação final e README vitrine      | 🔲      |
