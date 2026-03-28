@@ -96,3 +96,80 @@ def chart_scatter_pop_pib(df: pd.DataFrame) -> None:
     filepath = OUTPUTS_DIR / "scatter_pop_pib.html"
     fig.write_html(str(filepath))
     logger.info(f"Salvo: {filepath}")
+
+def chart_alunos_por_docente(df: pd.DataFrame) -> None:
+    """Gráfico de barras — alunos por docente por UF."""
+    df_sorted = df.sort_values("alunos_por_docente")
+    cores = [CORES_REGIAO[r] for r in df_sorted["regiao_nome"]]
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.barh(df_sorted["uf_sigla"], df_sorted["alunos_por_docente"], color=cores)
+
+    ax.set_xlabel("Alunos por docente")
+    ax.set_title("Alunos por docente por UF — Censo Escolar 2023", fontsize=14, fontweight="bold")
+    ax.axvline(x=df["alunos_por_docente"].mean(), color="#888", linestyle="--", linewidth=0.8)
+    ax.text(df["alunos_por_docente"].mean() + 0.3, 0, f'Média: {df["alunos_por_docente"].mean():.1f}',
+            fontsize=9, color="#888")
+
+    from matplotlib.patches import Patch
+    legend = [Patch(color=c, label=r) for r, c in CORES_REGIAO.items()]
+    ax.legend(handles=legend, loc="lower right", fontsize=9)
+
+    plt.tight_layout()
+    filepath = OUTPUTS_DIR / "alunos_por_docente_uf.png"
+    fig.savefig(filepath, dpi=150)
+    plt.close(fig)
+    logger.info(f"Salvo: {filepath}")
+
+
+def chart_pib_vs_educacao(df: pd.DataFrame) -> None:
+    """Scatter interativo — PIB per capita vs alunos por docente (plotly)."""
+    fig = px.scatter(
+        df,
+        x="pib_per_capita",
+        y="alunos_por_docente",
+        color="regiao_nome",
+        size="matriculas",
+        hover_name="uf_nome",
+        hover_data={
+            "pib_per_capita": ":,.0f",
+            "alunos_por_docente": ":.1f",
+            "matriculas": ":,.0f",
+            "escolas": ":,.0f",
+        },
+        color_discrete_map=CORES_REGIAO,
+        title="PIB per capita vs Alunos por docente — por UF (2021/2023)",
+        labels={
+            "pib_per_capita": "PIB per capita (R$)",
+            "alunos_por_docente": "Alunos por docente",
+            "regiao_nome": "Região",
+        },
+    )
+    fig.update_layout(template="plotly_white")
+
+    filepath = OUTPUTS_DIR / "scatter_pib_educacao.html"
+    fig.write_html(str(filepath))
+    logger.info(f"Salvo: {filepath}")
+
+
+def chart_investimento_por_aluno(df: pd.DataFrame) -> None:
+    """Gráfico de barras — PIB por matrícula por UF."""
+    df_sorted = df.sort_values("pib_por_matricula")
+    cores = [CORES_REGIAO[r] for r in df_sorted["regiao_nome"]]
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.barh(df_sorted["uf_sigla"], df_sorted["pib_por_matricula"], color=cores)
+
+    ax.set_xlabel("PIB por matrícula (R$)")
+    ax.set_title("PIB por matrícula por UF — IBGE/INEP", fontsize=14, fontweight="bold")
+    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"R$ {x:,.0f}"))
+
+    from matplotlib.patches import Patch
+    legend = [Patch(color=c, label=r) for r, c in CORES_REGIAO.items()]
+    ax.legend(handles=legend, loc="lower right", fontsize=9)
+
+    plt.tight_layout()
+    filepath = OUTPUTS_DIR / "pib_por_matricula_uf.png"
+    fig.savefig(filepath, dpi=150)
+    plt.close(fig)
+    logger.info(f"Salvo: {filepath}")
