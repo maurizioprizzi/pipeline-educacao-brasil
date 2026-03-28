@@ -71,19 +71,20 @@ make help
 
 ## Evolução do Projeto
 
-| Dia | Etapa                                    | Status |
-|-----|------------------------------------------|--------|
-| 1   | Setup e estrutura                        | ✅      |
-| 2   | Ingestão de dados (IBGE)                 | ✅      |
-| 3   | Armazenamento (DuckDB)                   | ✅      |
-| 4   | Tabelas analíticas e métricas derivadas  | ✅      |
-| 5   | Visualizações (matplotlib + plotly)      | ✅      |
-| 6   | Novas fontes de dados (INEP)             | ✅      |
-| 7   | Cruzamento IBGE + INEP no DuckDB         | ✅      |
-| 8   | Visualizações avançadas                  | ✅      |
-| 9   | Testes de qualidade de dados + CI        | 🔲      |
-| 10  | Orquestração (cron, idempotência, logs)  | 🔲      |
-| 11  | Documentação final e README vitrine      | 🔲      |
+| Dia | Etapa                                                       | Status  |
+|-----|-------------------------------------------------------------|---------|
+| 1   | Setup e estrutura                                           |   ✅    |
+| 2   | Ingestão de dados (IBGE)                                    |   ✅    |
+| 3   | Armazenamento (DuckDB)                                      |   ✅    |
+| 4   | Tabelas analíticas e métricas derivadas                     |   ✅    |
+| 5   | Visualizações (matplotlib + plotly)                         |   ✅    |
+| 6   | Novas fontes de dados (INEP)                                |   ✅    |
+| 7   | Cruzamento IBGE + INEP no DuckDB                            |   ✅    |
+| 8   | Visualizações avançadas                                     |   ✅    |
+| 9   | Testes de qualidade de dados + CI                           |   🔲    |
+| 10  | Orquestração (cron, idempotência, logs)                     |   🔲    |
+| 11  | Machine Learning (regressão, random forest, clustering)     |   🔲    |
+| 12  | Documentação final e README vitrine                         |   🔲    |
 
 ## Fontes de Dados
 

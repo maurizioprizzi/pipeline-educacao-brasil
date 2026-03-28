@@ -17,3 +17,6 @@ pytest>=8.2,<9
 
 # Qualidade de código
 flake8>=7.0,<8
+
+# Machine Learning
+scikit-learn>=1.5,<2
