@@ -38,6 +38,7 @@ outputs/*
 
 # Logs
 *.log
+logs/
 
 # Dados externos (grandes demais para Git)
 data/external/

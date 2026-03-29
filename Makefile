@@ -35,8 +35,8 @@ $(VENV)/bin/activate: requirements.txt
 # Pipeline
 # ----------------------------------------------------------------------------
 
-run: ingest transform analyze visualize ## Executa pipeline completa
-	@echo "✓ Pipeline executada com sucesso"
+run: setup ## Executa pipeline completa
+	$(PYTHON) -m scripts.run_pipeline
 
 ingest: setup ## Baixa dados das fontes públicas
 	@echo "→ Ingestão de dados..."
