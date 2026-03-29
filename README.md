@@ -82,7 +82,7 @@ make help
 | 7   | Cruzamento IBGE + INEP no DuckDB                            |   ✅    |
 | 8   | Visualizações avançadas                                     |   ✅    |
 | 9   | Testes de qualidade de dados + CI                           |   ✅    |
-| 10  | Orquestração (cron, idempotência, logs)                     |   🔲    |
+| 10  | Orquestração (cron, idempotência, logs)                     |   ✅    |
 | 11  | Machine Learning (regressão, random forest, clustering)     |   🔲    |
 | 12  | Documentação final e README vitrine                         |   🔲    |
 
