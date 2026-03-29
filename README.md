@@ -32,16 +32,21 @@ pipeline-educacao-brasil/
 ├── data/
 │   ├── raw/                # Dados brutos (não versionados)
 │   ├── processed/          # Dados limpos e transformados
-│   └── analytics/          # Tabelas analíticas finais
+│   ├── analytics/          # Tabelas analíticas finais
+│   └── external/           # Datasets externos (INEP, não versionados)
 ├── src/
-│   ├── ingestion/          # Scripts de coleta
-│   ├── transformation/     # Limpeza e transformação
-│   ├── analysis/           # Queries analíticas
-│   └── visualization/      # Gráficos e dashboards
-├── tests/                  # Testes automatizados
-├── docs/                   # Documentação e decisões
+│   ├── ingestion/          # Scripts de coleta (IBGE + INEP)
+│   ├── transformation/     # Limpeza e carga no DuckDB
+│   ├── analysis/           # Tabelas analíticas e métricas
+│   └── visualization/      # Gráficos (matplotlib + plotly)
+├── scripts/                # Orquestração da pipeline
+├── tests/                  # Testes automatizados (27 testes)
+├── docs/                   # Documentação e decisões técnicas
+├── logs/                   # Logs de execução (não versionados)
+├── outputs/                # Gráficos gerados (não versionados)
 ├── Makefile                # Orquestrador principal
-└── requirements.txt        # Dependências Python
+├── requirements.txt        # Dependências Python
+└── pyproject.toml          # Configuração do projeto
 ```
 
 ## Como Executar
