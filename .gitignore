@@ -24,8 +24,7 @@ data/analytics/*
 *.duckdb.wal
 
 # Outputs gerados (reproduzíveis via pipeline)
-outputs/*
-!outputs/.gitkeep
+outputs/*.html
 
 # IDE
 .vscode/
